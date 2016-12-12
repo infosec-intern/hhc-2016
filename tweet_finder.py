@@ -27,7 +27,7 @@ def get_tweets():
     with open("output.txt", "w") as ofile:
         ofile.write("\n".join([status["text"] for status in response]))
     last_id = response[-1]["id"]
-    response = client.api.statuses.user_timeline.get(screen_name="SantaWClaus", count=200, max_id=first_id)
+    response = client.api.statuses.user_timeline.get(screen_name="SantaWClaus", count=200, max_id=last_id)
     print("\n".join([status["text"] for status in response]))
     with open("output.txt", "a") as ofile:
         ofile.write("\n".join([status["text"] for status in response]))
