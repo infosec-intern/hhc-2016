@@ -14,7 +14,7 @@ def read_config(filename):
         return json.loads(ifile.read())
 
 
-if __name__ == '__main__':
+def get_tweets():
     config = read_config("config.json")
     client = Api(
         consumer_key=config["consumerKey"],
@@ -22,6 +22,16 @@ if __name__ == '__main__':
         access_token=config["accessToken"],
         access_token_secret=config["accessSecret"]
     )
-    statuses = []
-    response = client.api.statuses.user_timeline.get(screen_name=config["target"])
+    response = client.api.statuses.user_timeline.get(screen_name="SantaWClaus", count=200)
     print("\n".join([status["text"] for status in response]))
+    with open("output.txt", "w") as ofile:
+        ofile.write("\n".join([status["text"] for status in response]))
+    last_id = response[-1]["id"]
+    response = client.api.statuses.user_timeline.get(screen_name="SantaWClaus", count=200, max_id=first_id)
+    print("\n".join([status["text"] for status in response]))
+    with open("output.txt", "a") as ofile:
+        ofile.write("\n".join([status["text"] for status in response]))
+
+
+if __name__ == '__main__':
+    get_tweets()
