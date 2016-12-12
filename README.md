@@ -1,6 +1,6 @@
 # Holiday Hack Challenge 2016
-(Intro)[https://www.holidayhackchallenge.com/2016/]
-(Neighborhood)[https://quest2016.holidayhackchallenge.com/]
+[Intro](https://www.holidayhackchallenge.com/2016/)
+[Neighborhood](https://quest2016.holidayhackchallenge.com/)
 
 ## Part One
 ![Santa's Business Card](./business_card.PNG)
