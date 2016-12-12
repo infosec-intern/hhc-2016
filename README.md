@@ -1,5 +1,5 @@
 # Holiday Hack Challenge 2016
-[Intro](https://www.holidayhackchallenge.com/2016/)
+[Intro](https://www.holidayhackchallenge.com/2016/) <br>
 [Neighborhood](https://quest2016.holidayhackchallenge.com/)
 
 ## Part One
