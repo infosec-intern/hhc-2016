@@ -24,6 +24,4 @@ if __name__ == '__main__':
     )
     statuses = []
     response = client.api.statuses.user_timeline.get(screen_name=config["target"])
-    [statuses.append(status["text"]) for status in response]
-    print("".join(statuses))
-    print(json.dumps(response[0], indent=4))
+    print("\n".join([status["text"] for status in response]))
