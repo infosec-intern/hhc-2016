@@ -18,4 +18,5 @@
 }
 ```
 1) What is the secrete message in Santa's tweets?
+  [Done]
 2) What is inside the ZIP file distributed by Santa's team?
